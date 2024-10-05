@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            margin: 100px;
+            background-color: magenta;
+            position: relative;
+        }
+        #slider{
+            height: 100px;
+            width: 400px;
+        
+        }
+    </style>
+</head>
+<body>
+    <input type="range" id="slider" onmousemove="update()" max="800">
+    <div id="box">
+
+    </div>
+    <script>
+        sliderobj=document.getElementById("slider")
+        boxobj=document.getElementById("box")
+        function update()
+        {
+            boxobj.style.transform=`rotate(${sliderobj.value}deg)`
+            boxobj.style.left=`${sliderObj.value}px`
+        }
+    </script>
+
+    
+</body>
+</html>
